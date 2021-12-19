@@ -66,6 +66,7 @@ class TodoTableviewController: UITableViewController {
         context.delete(todoobjects[indexPath.row])
 
         saveContext()
+        todoobjects.remove(at: indexPath.row)
         tableView.reloadData()
 
 
