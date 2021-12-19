@@ -11,8 +11,7 @@ import CoreData
 class TodoTableviewController: UITableViewController {
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let saveContext = (UIApplication.shared.delegate as! AppDelegate).saveContext
-    // we call this function like normal: saveContext()
-    // again, keep in mind that you can call it whatever you want, it doesn't have to be saveContext
+ 
 
     var todoobjects = [TodoList]()
    // var todorecords = [TodoList]() //[ title, tododesc , duedate, checkmark]
@@ -67,7 +66,7 @@ class TodoTableviewController: UITableViewController {
         context.delete(todoobjects[indexPath.row])
 
         saveContext()
-      //  tableView.reloadData()
+        tableView.reloadData()
 
 
     }
